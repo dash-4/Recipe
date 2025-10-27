@@ -5,12 +5,12 @@ function Header() {
   return (
    <header class="bg-[#562F1A] p-4">
   <div class="container mx-auto flex justify-between items-center">
-    <div class="text-white font-bold text-xl">Логотип</div>
+    <div class="text-white font-bold text-xl border-2 border-[#BECAD4] p-2">Recipe</div>
 
-    <nav class="hidden md:flex space-x-4">
-      <a href="#" class="text-gray-300 hover:text-white">Главная</a>
-      <a href="#" class="text-gray-300 hover:text-white">О нас</a>
-      <a href="#" class="text-gray-300 hover:text-white">Контакты</a>
+    <nav class="hidden md:flex space-x-4 border-2 border-[#BECAD4] p-2">
+      <Link to="/" class="text-gray-300 hover:text-white">Главная</Link>
+      <Link to="/list" class="text-gray-300 hover:text-white">Рецепты</Link>
+      <Link to="/form" class="text-gray-300 hover:text-white">Форма</Link>
     </nav>
 
     <div class="md:hidden">
