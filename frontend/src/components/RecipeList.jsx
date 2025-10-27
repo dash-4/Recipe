@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const RecipeList = () => {
+const RecipeList = ({ token }) => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/recipes/')
+    axios.get('http://127.0.0.1:8000/api/recipes/', {
+      headers: { Authorization: `Bearer ${token}` }
+    })
       .then(response => setRecipes(response.data))
       .catch(error => console.error('Error fetching recipes:', error));
-  }, []);
+  }, [token]);
 
   return (
     <div className="container mx-auto p-4">

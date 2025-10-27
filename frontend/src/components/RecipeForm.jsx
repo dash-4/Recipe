@@ -1,17 +1,19 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-const RecipeForm = () => {
+const RecipeForm = ({ token }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://127.0.0.1:8000/api/recipes/', { title, description })
+    axios.post('http://127.0.0.1:8000/api/recipes/', { title, description }, {
+      headers: { Authorization: `Bearer ${token}` }
+    })
       .then(() => {
         setTitle('');
         setDescription('');
-        window.location.reload(); // Перезагрузка для обновления списка
+        window.location.reload();
       })
       .catch(error => console.error('Error creating recipe:', error));
   };
