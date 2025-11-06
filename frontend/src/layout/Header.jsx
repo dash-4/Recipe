@@ -3,16 +3,14 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="bg-[#562F1A] p-4"> 
-      <div className="container mx-auto flex justify-between items-center"> 
+    <header className="bg-[#592922] p-4"> 
+      <div className="container mx-auto flex justify-between items-center "> 
         <div className="text-white font-bold text-xl border-2 border-[#BECAD4] p-2">Recipe</div> 
 
         <nav className="hidden md:flex space-x-4 border-2 border-[#BECAD4] p-2"> 
           <Link to="/" className="text-gray-300 hover:text-white">Главная</Link>
           <Link to="/list" className="text-gray-300 hover:text-white">Рецепты</Link>
           <Link to="/form" className="text-gray-300 hover:text-white">Форма</Link>
-          <Link to="/register" className="text-gray-300 hover:text-white">Регистрация</Link> 
-          <Link to="/login" className="text-gray-300 hover:text-white">Вход</Link> 
         </nav>
 
         <div className="md:hidden"> 

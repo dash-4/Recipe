@@ -7,7 +7,7 @@ function MainLayout() {
     return(
         <div className="flex flex-col min-h-screen">
             <Header />
-            <main className="grow flex justify-center items-center w-full bg-[#BECAD4]">
+            <main className="bg-[#dec4c2] grow flex justify-center items-center w-full">
                 <Outlet />
             </main>
             <Footer />
